@@ -41,3 +41,11 @@ Content-Type: application/json
 @id_to_delete=1
 DELETE {{host}}:{{port}}/Contributors/{{id_to_delete}}
 
+
+###
+
+// Get a contributor by email
+@email_to_get =fake@contributor1.com
+GET {{host}}:{{port}}/Contributors/email/{{email_to_get}}
+
+

@@ -11,7 +11,8 @@ public class EfRepositoryDelete : BaseEfRepoTestFixture
     // add a Contributor
     var repository = GetRepository();
     var initialName = Guid.NewGuid().ToString();
-    var Contributor = new Contributor(initialName);
+    var initialEmail = "test@test.com";
+    var Contributor = new Contributor(initialName, initialEmail);
     await repository.AddAsync(Contributor);
 
     // delete the item

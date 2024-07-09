@@ -10,8 +10,9 @@ public class EfRepositoryAdd : BaseEfRepoTestFixture
   {
     var testContributorName = "testContributor";
     var testContributorStatus = ContributorStatus.NotSet;
+    var testContributorEmail = "test@test.com";
     var repository = GetRepository();
-    var Contributor = new Contributor(testContributorName);
+    var Contributor = new Contributor(testContributorName, testContributorEmail);
 
     await repository.AddAsync(Contributor);
 
