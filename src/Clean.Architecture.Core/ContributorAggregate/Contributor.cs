@@ -10,9 +10,7 @@ public class Contributor(string name, string email) : EntityBase, IAggregateRoot
   public string Name { get; private set; } = Guard.Against.NullOrEmpty(name, nameof(name));
   public ContributorStatus Status { get; private set; } = ContributorStatus.NotSet;
   public PhoneNumber? PhoneNumber { get; private set; }
-  
-  public string Email { get; private set; } = email;
-
+  public string Email { get; private set; } = Guard.Against.NullOrEmpty(email, nameof(email));
   public void SetPhoneNumber(string phoneNumber)
   {
     PhoneNumber = new PhoneNumber(string.Empty, phoneNumber, string.Empty);
