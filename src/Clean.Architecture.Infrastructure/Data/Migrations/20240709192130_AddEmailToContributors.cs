@@ -15,7 +15,9 @@ namespace Clean.Architecture.Infrastructure.Data.Migrations
                 table: "Contributors",
                 type: "TEXT",
                 nullable: false,
-                defaultValue: "");
+                maxLength: 255,
+                defaultValue:"example@example.com",
+                comment: "Email address of the contributor");
         }
 
         /// <inheritdoc />
