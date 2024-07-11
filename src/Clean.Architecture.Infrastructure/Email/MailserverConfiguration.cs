@@ -1,7 +1,7 @@
 ﻿namespace Clean.Architecture.Infrastructure.Email;
 
-public class MailserverConfiguration()
+public class MailserverConfiguration
 {
-  public string Hostname { get; set; } = "localhost";
-  public int Port { get; set; } = 25;
+  public string Hostname { get; init; } = "localhost";
+  public int Port { get; init; } = 25;
 }

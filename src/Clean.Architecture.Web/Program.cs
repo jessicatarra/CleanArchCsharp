@@ -29,7 +29,7 @@ var microsoftLogger = new SerilogLoggerFactory(logger)
 // Configure Web Behavior
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
-  options.CheckConsentNeeded = context => true;
+  options.CheckConsentNeeded = _ => true;
   options.MinimumSameSitePolicy = SameSiteMode.None;
 });
 

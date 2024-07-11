@@ -36,7 +36,6 @@ public class Create(IMediator _mediator)
     if (result.IsSuccess)
     {
       Response = new CreateContributorResponse(result.Value, request.Name!);
-      return;
     }
     // TODO: Handle other cases as necessary
   }

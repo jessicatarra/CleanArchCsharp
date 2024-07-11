@@ -17,7 +17,7 @@ public class SmtpEmailSender : IEmailSender
   public SmtpEmailSender(ILogger<SmtpEmailSender> logger,
                          IOptions<MailserverConfiguration> mailserverOptions) 
   {
-    _mailserverConfiguration = mailserverOptions.Value!;
+    _mailserverConfiguration = mailserverOptions.Value;
     _logger = logger;
   }
 

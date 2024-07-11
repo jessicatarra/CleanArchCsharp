@@ -15,7 +15,7 @@ public class MimeKitEmailSender : IEmailSender
     IOptions<MailserverConfiguration> mailserverOptions)
   {
     _logger = logger;
-    _mailserverConfiguration = mailserverOptions.Value!;
+    _mailserverConfiguration = mailserverOptions.Value;
   }
 
 

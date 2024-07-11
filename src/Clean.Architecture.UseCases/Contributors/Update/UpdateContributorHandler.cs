@@ -15,7 +15,7 @@ public class UpdateContributorHandler(IRepository<Contributor> _repository)
       return Result.NotFound();
     }
 
-    existingContributor.UpdateName(request.NewName!);
+    existingContributor.UpdateName(request.NewName);
 
     await _repository.UpdateAsync(existingContributor, cancellationToken);
 
