@@ -5,6 +5,13 @@ using MediatR;
 
 namespace Clean.Architecture.Web.Contributors;
 
+/// <summary>
+/// Get a Contributor by Email.
+/// </summary>
+/// <remarks>
+/// This endpoint allows anonymous access and retrieves a contributor's
+/// details based on their email address.
+/// </remarks>
 public class GetByEmail(IMediator _mediator) : Endpoint<GetContributorByEmailRequest, ContributorRecord>
 {
   public override void Configure()
